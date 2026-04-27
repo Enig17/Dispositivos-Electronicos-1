@@ -1,0 +1,1045 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+%\usepackage{lmodern}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+%\usepackage{helvet}
+%\usepackage{mathptmx}
+\usepackage{amsmath}       
+\usepackage{amssymb}      
+\usepackage{adjustbox}     
+\usepackage{lastpage}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage{amsmath}
+\usepackage{minted}
+\usepackage{wrapfig}
+
+\usepackage{tabularx}
+\usepackage{qrcode}
+
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+\usepackage{longtable}  
+
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{8pt} 
+
+\setlength{\footskip}{25pt}
+%---------------------------python
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinestyle{pythonstyle}{
+	language=Python,
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{blue},
+	stringstyle=\color{red},
+	commentstyle=\color{gray},
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	stepnumber=1,
+	numbersep=5pt,
+	showspaces=false,
+	showstringspaces=false,
+	breaklines=true,
+	frame=single,
+	tabsize=4
+}
+
+
+
+%-------------------------------Consola
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinestyle{consola}{
+	backgroundcolor=\color{black!5},
+	basicstyle=\ttfamily,
+	frame=single,
+	keywordstyle=\color{blue},
+	commentstyle=\color{gray},
+	showstringspaces=false
+}
+
+%Plano Z y Z^2
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+
+
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=1.5cm}
+
+% Estilo de página
+\pagestyle{fancy}
+\fancypagestyle{miestilo}{
+	\fancyhf{} % Limpia encabezado y pie
+	
+	% Encabezado izquierda: logo
+	\fancyhead[L]{%
+		\vspace{0.1cm}
+		\adjustbox{valign=c,scale=0.15}{%
+			\begin{tikzpicture}
+				\clip (-3,-2.8) rectangle (3,2.8);
+				\draw[black,line width=0.8cm] (-2.3,0)--(2.3,0);
+				\draw[black,line width=0.8cm] (0,-2.85)--(0,2.85);
+				\draw[black,line width=0.87cm] (0,2.8) circle(2);
+				\draw[black,line width=0.87cm] (0,-2.8) circle(2);
+			\end{tikzpicture}
+		}%
+	}
+	
+	% Encabezado centro: título
+	\fancyhead[C]{\textbf{Dispositivos Electrónicos}}
+	
+	% Encabezado derecha: TP y año debajo
+	\fancyhead[R]{%
+		Trabajo Practico de Laboratorio 1 \\ 2026
+	}
+	
+	% Línea en el encabezado y pie
+	\renewcommand{\headrulewidth}{0.4pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+	
+	% Pie de página derecha: Página X de Y
+	\fancyfoot[R]{Página \thepage\ de \pageref{LastPage}}
+}
+
+
+\begin{document}
+	
+	% --------- PORTADA ---------
+	\pagestyle{empty}
+	\begin{center}
+		\textbf{\LARGE UNIVERSIDAD TECNOLÓGICA NACIONAL}\\[0.2cm]
+		\textbf{\Large FACULTAD REGIONAL CÓRDOBA}\\[0.5cm]
+		\textbf{\large INGENIERÍA ELECTRÓNICA}\\[1.5cm]
+		
+		\begin{tikzpicture}
+			\clip (-3,-2.8) rectangle (3,2.8);
+			\draw[black,line width=0.8cm] (-2.3,0)--(2.3,0);
+			\draw[black,line width=0.8cm] (0,-2.85)--(0,2.85);
+			\draw[black,line width=0.87cm] (0,2.8) circle(2);
+			\draw[black,line width=0.87cm] (0,-2.8) circle(2);
+		\end{tikzpicture}
+		
+		\vspace{1cm}
+		\textbf{\huge Dispositivos Electrónicos }\\[0.5cm]
+		\rule{\textwidth}{0.4pt}\\[0.3cm]
+		\textbf{\Huge Trabajo Practico de Laboratorio 1}\\[0.3cm]
+		{\large Identificación de Componentes Electrónicos y
+			Mediciones Básicas}\\[0.3cm]
+		\rule{\textwidth}{0.4pt}\\[1.5cm]
+	\end{center}
+	
+	\begin{flushleft}
+		\begin{tabular}{@{}ll}
+			DOCENTES     & : Ing. Luis Alberto Guanuco\\ 
+			& \ \ Ing. Leonardo Gabriel Gamboa \\[0.2cm]
+			CÁTEDRA      & :  Análisis de Señales y Sistemas  \\[0.2cm]
+			CURSO        & : 3R1 \\[0.2cm]
+			ALUMNO      & :
+			\begin{tabular}[t]{@{}l l}
+				Gonza Elías Noel Imanol           & 87669 \\ 
+				
+				Juarez Luciano                    & 95021   \\ 
+				Pereyra Nahuel                    & 402333  \\ 
+				         
+				
+			\end{tabular}
+		\end{tabular}
+	\end{flushleft}
+	
+	\vfill
+	\begin{center}
+		\textbf{CÓRDOBA, ARGENTINA}\\
+		\textbf{2026}
+	\end{center}
+	\pagestyle{empty}
+	% --------- CAMBIO DE ESTILO ---------
+	\newpage
+	\pagenumbering{arabic}
+	\pagestyle{miestilo}
+	% --------- CONTENIDO ---------
+	\tableofcontents
+	\newpage
+	
+	
+	\section*{Introducción}
+	\addcontentsline{toc}{section}{Introducción}
+	En el presente Trabajo Práctico se abordó el estudio de circuitos resistivos de corriente continua, con el objetivo de aplicar los conceptos teóricos fundamentales de análisis eléctrico y contrastarlos con resultados obtenidos tanto en simulación como en laboratorio.
+	
+	En una primera etapa, se realizó el análisis del circuito propuesto utilizando la Ley de Ohm y las Leyes de Kirchhoff, determinando las tensiones, corrientes y potencias presentes en cada uno de los elementos. Esta instancia permitió comprender el comportamiento eléctrico del circuito a partir de expresiones teóricas y resoluciones analíticas.
+	
+	Posteriormente, se empleó el software LTspice para simular el circuito y obtener sus valores de operación, verificando la coherencia entre los resultados calculados y los arrojados por la simulación. Además, se analizaron distintas herramientas del simulador para observar el comportamiento del circuito frente a variaciones de sus parámetros.
+	
+	Finalmente, se implementó físicamente el circuito en protoboard y se realizaron mediciones experimentales mediante el uso de multímetro, registrando los valores de tensión, corriente y potencia. A partir de la comparación entre análisis teórico, simulación e implementación práctica, se evaluaron las diferencias observadas y se identificaron las posibles causas asociadas a tolerancias de los componentes, condiciones reales de medición y limitaciones de los modelos ideales.
+	
+	\newpage
+	
+	
+	
+	\section*{Análisis del Circuito}
+	\addcontentsline{toc}{section}{Análisis del Circuito}
+	
+	\begin{itemize}
+		\item $V_S = 10[V]$
+		\item $R_1 = 10[k\Omega]$
+		\item $R_2 = 4,7[k\Omega]$
+		\item $R_3 = 3,3[k\Omega]$
+	\end{itemize}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.45\textwidth]{imagenes/img2.png}
+		\caption{Circuito para análisis.}
+		\label{fig:circuito_analisis}
+	\end{figure}
+	
+	
+	Para comenzar con el análisis del circuito, se realizó una revisión de los conceptos principales de la
+	Ley de Ohm y de las Leyes de Kirchhoff. A partir de esto, se identificó que el circuito presentado
+	corresponde a un circuito mixto, ya que posee una resistencia conectada en serie y dos resistencias
+	conectadas en paralelo.
+	
+	Este reconocimiento es importante, ya que permite aplicar correctamente los métodos de resolución
+	para calcular la resistencia total del circuito, la corriente total y las corrientes que circulan por cada
+	resistencia.
+	
+	
+	
+	
+	
+	
+	
+	
+\begin{figure}[H]
+	\centering
+	
+	\begin{minipage}{0.30\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{imagenes/img3.png}
+		\caption{Circuito equivalente reemplazando el paralelo por $R_{23}$.}
+		\label{fig:circuito_equivalente}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.60\textwidth}
+		En una conexión serie, la corriente es la misma en todos los elementos. Por esta razón, la corriente
+		que circula por $R_1$ es igual a la corriente total. Sin embargo, las caídas de tensión en cada resistencia
+		pueden ser diferentes, ya que dependen del valor de cada resistencia.
+		
+		Luego de obtener la corriente total, se continúa con el cálculo de las corrientes $I_2$ e $I_3$, que
+		corresponden a las corrientes que circulan por las resistencias conectadas en paralelo.
+		
+		Por lo tanto:
+		
+		\[
+		R_{23} = 1938,75\Omega
+		\]
+		
+		\[
+		I_1 = I_T = 0,8376\,mA
+		\]
+	\end{minipage}
+	
+\end{figure}
+	
+	
+	
+	
+	\subsection*{Aplicación de las Leyes de Kirchhoff}
+	\addcontentsline{toc}{subsection}{Aplicación de las Leyes de Kirchhoff}
+	
+	Para continuar con el análisis del circuito, se aplican las Leyes de Kirchhoff.
+	
+	\subsubsection*{Ley de Corrientes de Kirchhoff}
+	\addcontentsline{toc}{subsubsection}{Ley de Corrientes de Kirchhoff}
+	
+	Según la Ley de Corrientes de Kirchhoff, la corriente total que llega al nodo se divide entre las
+	ramas en paralelo. Por lo tanto:
+	
+	\[
+	I_T = I_2 + I_3
+	\]
+	
+	\subsubsection*{Ley de Tensiones de Kirchhoff}
+	\addcontentsline{toc}{subsubsection}{Ley de Tensiones de Kirchhoff}
+	
+	Aplicando la Ley de Tensiones de Kirchhoff en la malla principal, se obtiene:
+	
+	\[
+	V_S - V_{R1} - V_{R2} = 0
+	\]
+	
+	Por lo tanto:
+	
+	\[
+	V_S = V_{R1} + V_{R2}
+	\]
+	
+	Como las caídas de tensión se calculan mediante la Ley de Ohm:
+	
+	\[
+	V = I \cdot R
+	\]
+	
+	entonces:
+	
+	\[
+	V_S = I_T \cdot R_1 + I_2 \cdot R_2
+	\]
+	
+	Para la segunda malla, correspondiente al paralelo entre $R_2$ y $R_3$, se cumple que la caída de
+	tensión en ambas resistencias es la misma:
+	
+	\[
+	V_{R2} - V_{R3} = 0
+	\]
+	
+	\[
+	V_{R2} = V_{R3}
+	\]
+	
+	Reemplazando por Ley de Ohm:
+	
+	\[
+	I_2 \cdot R_2 = I_3 \cdot R_3
+	\]
+	
+	Despejando $I_3$:
+	
+	\[
+	I_3 = I_2 \cdot \frac{R_2}{R_3}
+	\]
+	
+	Luego, reemplazamos esta expresión en la Ley de Corrientes de Kirchhoff:
+	
+	\[
+	I_T = I_2 + I_3
+	\]
+	
+	\[
+	I_T = I_2 + I_2 \cdot \frac{R_2}{R_3}
+	\]
+	
+	Sacando factor común $I_2$:
+	
+	\[
+	I_T = I_2 \left(1 + \frac{R_2}{R_3}\right)
+	\]
+	
+	\[
+	I_T = I_2 \left(\frac{R_3}{R_3} + \frac{R_2}{R_3}\right)
+	\]
+	
+	\[
+	I_T = I_2 \left(\frac{R_3 + R_2}{R_3}\right)
+	\]
+	
+	Despejando $I_2$:
+	
+	\[
+	I_2 = I_T \left(\frac{R_3}{R_2 + R_3}\right)
+	\]
+	
+	Y si querés agregar después los valores numéricos de las caídas de tensión:
+	
+	\subsubsection*{Cálculo de caídas de tensión}
+	\addcontentsline{toc}{subsubsection}{Cálculo de caídas de tensión}
+	
+	La caída de tensión en $R_1$ se calcula como:
+	
+	\[
+	V_{R1} = I_T \cdot R_1
+	\]
+	
+	\[
+	V_{R1} = 0,837\,mA \cdot 10k\Omega
+	\]
+	
+	\[
+	V_{R1} = 8,37V
+	\]
+	
+	La caída de tensión en $R_2$ es:
+	
+	\[
+	V_{R2} = I_2 \cdot R_2
+	\]
+	
+	\[
+	V_{R2} = 0,346\,mA \cdot 4,7k\Omega
+	\]
+	
+	\[
+	V_{R2} = 1,62V
+	\]
+	
+	La caída de tensión en $R_3$ es:
+	
+	\[
+	V_{R3} = I_3 \cdot R_3
+	\]
+	
+	\[
+	V_{R3} = 0,491\,mA \cdot 3,3k\Omega
+	\]
+	
+	\[
+	V_{R3} = 1,62V
+	\]
+	
+	Como $R_2$ y $R_3$ están conectadas en paralelo, ambas tienen la misma caída de tensión:
+	
+	\[
+	V_{R2} = V_{R3} = 1,62V
+	\]
+	
+	
+	
+	
+	\subsubsection*{Despeje de la corriente total}
+	\addcontentsline{toc}{subsubsection}{Despeje de la corriente total}
+	
+	
+	\begin{figure}[H]
+		\centering
+		
+		\begin{minipage}{0.30\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{imagenes/img3.png}
+			\caption{Circuito equivalente reemplazando el paralelo por $R_{23}$.}
+			\label{fig:circuito_equivalente}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.60\textwidth}
+		
+		Partiendo de la ecuación de la malla principal:
+		
+		\[
+		V_S = I_T R_1 + I_2 R_2
+		\]
+		
+		Como anteriormente se obtuvo que:
+		
+		\[
+		I_2 = I_T \left(\frac{R_3}{R_2 + R_3}\right)
+		\]
+		
+		se reemplaza $I_2$ en la ecuación de tensión:
+		
+		\[
+		V_S = I_T R_1 + I_T \left(\frac{R_3}{R_2 + R_3}\right) R_2
+		\]
+		
+		Luego, se extrae factor común $I_T$:
+		
+		\[
+		V_S = I_T \left( R_1 + \frac{R_3 R_2}{R_2 + R_3} \right)
+		\]
+		
+		Finalmente, se despeja la corriente total:
+		
+		\[
+		I_T =
+		\frac{V_S}
+		{R_1 + \frac{R_3 R_2}{R_2 + R_3}}
+		\]
+		
+		Esta expresión permite calcular la corriente total del circuito considerando la resistencia $R_1$ en serie
+		con el paralelo formado por $R_2$ y $R_3$.
+		
+
+	\end{minipage}
+	
+	\end{figure}
+	
+	
+	
+	
+	
+
+	
+	
+	\subsubsection*{Cálculo de la resistencia equivalente}
+	\addcontentsline{toc}{subsubsection}{Cálculo de la resistencia equivalente}
+	
+	Como $R_2$ y $R_3$ se encuentran conectadas en paralelo, primero se calcula la resistencia equivalente
+	de esa parte del circuito:
+	
+	\[
+	R_{eq} = R_1 + (R_2 \parallel R_3)
+	\]
+	
+	\[
+	R_{23} = \frac{R_2 \cdot R_3}{R_2 + R_3}
+	\]
+	
+	Reemplazando los valores:
+	
+	\[
+	R_{23} =
+	\frac{4,7k\Omega \cdot 3,3k\Omega}{4,7k\Omega + 3,3k\Omega}
+	\]
+	
+	\[
+	R_{23} =
+	\frac{15,51k\Omega^2}{8k\Omega}
+	\]
+	
+	\[
+	R_{23} = 1,94k\Omega
+	\]
+	
+	Luego, como $R_1$ está en serie con $R_{23}$, se calcula la resistencia total:
+	
+	\[
+	R_T = R_1 + R_{23}
+	\]
+	
+	\[
+	R_T = 10k\Omega + 1,94k\Omega
+	\]
+	
+	\[
+	R_T = 11,94k\Omega
+	\]
+	
+	
+	\subsubsection*{Cálculo de las corrientes del circuito}
+	\addcontentsline{toc}{subsubsection}{Cálculo de las corrientes del circuito}
+	
+	A partir de la resistencia total del circuito, se calcula la corriente total mediante la Ley de Ohm:
+	
+	\[
+	I_T =
+	\frac{V_S}
+	{R_1 + \frac{R_3 R_2}{R_3 + R_2}}
+	\]
+	
+	Reemplazando los valores:
+	
+	\[
+	I_T =
+	\frac{10V}
+	{10k\Omega + \frac{3,3k\Omega \cdot 4,7k\Omega}{3,3k\Omega + 4,7k\Omega}}
+	\]
+	
+	\[
+	I_T =
+	\frac{10V}
+	{10k\Omega + \frac{15,51k\Omega^2}{8k\Omega}}
+	\]
+	
+	\[
+	I_T =
+	\frac{10V}{10k\Omega + 1,938k\Omega}
+	\]
+	
+	\[
+	I_T =
+	\frac{10V}{11,938k\Omega}
+	\]
+	
+	\[
+	I_T = 0,837mA
+	\]
+	
+	Como $R_1$ se encuentra en serie con el resto del circuito, la corriente que circula por $R_1$ es igual
+	a la corriente total:
+	
+	\[
+	I_1 = I_T
+	\]
+	
+	\[
+	I_1 = 0,837mA
+	\]
+	
+	Luego, para calcular la corriente que circula por $R_2$, se utiliza la relación de división de corriente:
+	
+	\[
+	I_2 = I_T \left(\frac{R_3}{R_3 + R_2}\right)
+	\]
+	
+	Reemplazando los valores:
+	
+	\[
+	I_2 =
+	0,837mA
+	\left(
+	\frac{3,3k\Omega}{3,3k\Omega + 4,7k\Omega}
+	\right)
+	\]
+	
+	\[
+	I_2 =
+	0,837mA
+	\left(
+	\frac{3,3k\Omega}{8k\Omega}
+	\right)
+	\]
+	
+	\[
+	I_2 =
+	0,837mA \cdot 0,413
+	\]
+	
+	\[
+	I_2 = 0,346mA
+	\]
+	
+	Finalmente, aplicando la Ley de Corrientes de Kirchhoff:
+	
+	\[
+	I_T = I_2 + I_3
+	\]
+	
+	se despeja $I_3$:
+	
+	\[
+	I_3 = I_T - I_2
+	\]
+	
+	\[
+	I_3 = 0,837mA - 0,346mA
+	\]
+	
+	\[
+	I_3 = 0,491mA
+	\]
+	
+	
+	
+	
+	
+	\subsubsection*{Cálculo de potencia}
+	\addcontentsline{toc}{subsubsection}{Cálculo de potencia}
+	
+	Una vez obtenidos los valores de tensión y corriente en cada resistencia, se calcula la potencia
+	utilizando la expresión:
+	
+	\[
+	P = V \cdot I
+	\]
+	
+	Los valores obtenidos se resumen en la siguiente tabla:
+	
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Elemento} & \textbf{Tensión (V)} & \textbf{Corriente (mA)} & \textbf{Potencia (mW)} \\
+			\hline
+			$V_S$ & $10V$ & $0,837mA$ & $8,37mW$ \\
+			\hline
+			$R_1$ & $8,37V$ & $0,837mA$ & $7,01mW$ \\
+			\hline
+			$R_2$ & $1,62V$ & $0,346mA$ & $0,56mW$ \\
+			\hline
+			$R_3$ & $1,62V$ & $0,491mA$ & $0,80mW$ \\
+			\hline
+		\end{tabular}
+		\caption{Valores de tensión, corriente y potencia del circuito.}
+		\label{tab:valores_potencia}
+	\end{table}
+	
+	A continuación, se muestran los cálculos de potencia para cada elemento del circuito:
+	
+	\[
+	P_{R1} = V_{R1} \cdot I_T
+	\]
+	
+	\[
+	P_{R1} = 8,37V \cdot 0,837mA
+	\]
+	
+	\[
+	P_{R1} = 7,01mW
+	\]
+	
+	\[
+	P_{R2} = V_{R2} \cdot I_2
+	\]
+	
+	\[
+	P_{R2} = 1,62V \cdot 0,346mA
+	\]
+	
+	\[
+	P_{R2} = 0,56mW
+	\]
+	
+	\[
+	P_{R3} = V_{R3} \cdot I_3
+	\]
+	
+	\[
+	P_{R3} = 1,62V \cdot 0,491mA
+	\]
+	
+	\[
+	P_{R3} = 0,80mW
+	\]
+	
+	Finalmente, la potencia total entregada por la fuente se calcula como:
+	
+	\[
+	P_S = V_S \cdot I_T
+	\]
+	
+	\[
+	P_S = 10V \cdot 0,837mA
+	\]
+	
+	\[
+	P_S = 8,37mW
+	\]
+	
+	
+	
+   \section*{Simulación en LTspice}
+		\addcontentsline{toc}{section}{Simulación en LTspice}
+	
+
+	\subsection*{Simulación DC op point}
+	\addcontentsline{toc}{subsection}{Simulación DC op point}
+	
+	
+	
+	Se armó el circuito en LTspice y se ejecutó el análisis de punto de operación DC. En la fuente y en
+	algunas corrientes puede aparecer signo negativo por la convención de sentido que toma LTspice; 
+	físicamente indica que la fuente entrega energía al circuito.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.85\textwidth]{imagenes/img1.png}
+		\caption{Circuito simulado y resultados de punto de operación en LTspice.}
+		\label{fig:simulacion_ltspice_op}
+	\end{figure}
+	
+	\begin{table}[H]
+		\centering
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			
+			\textbf{Elemento} & \textbf{Tensión (V)} & \textbf{Corriente (mA)} & \textbf{Potencia (mW)} \\
+			\hline
+			$V_S$ & $10,000$ & $0,838$ & $8,376$ \\
+			\hline
+			$R_1$ & $8,376$ & $0,838$ & $7,016$ \\
+			\hline
+			$R_2$ & $1,624$ & $0,346$ & $0,561$ \\
+			\hline
+			$R_3$ & $1,624$ & $0,492$ & $0,799$ \\
+			\hline
+		\end{tabular}
+		\caption{Valores esperados por simulación DC op point.}
+		\label{tab:valores_simulacion_dc}
+	\end{table}
+	
+	\subsection*{Barrido de tensión continua}
+	\addcontentsline{toc}{subsection}{Barrido de tensión continua}
+	
+	
+	En el barrido DC se varió la fuente $V_S$ desde $0\,V$ hasta $20\,V$. Las corrientes resultaron
+	proporcionales a la tensión aplicada, tal como predice la Ley de Ohm para una red resistiva lineal.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth]{imagenes/img4.png}
+		\caption{Barrido DC de corriente en $R_1$, $R_2$ y $R_3$ al variar $V_S$.}
+		\label{fig:barrido_dc_corrientes}
+	\end{figure}
+	
+	
+	
+	\subsection*{Barrido de parámetro $R_2$}
+	\addcontentsline{toc}{subsection}{Barrido de parámetro $R_2$}
+	
+	Se realizó un barrido paramétrico de $R_2$ desde $1\,k\Omega$ hasta $10\,k\Omega$.
+	Al aumentar $R_2$, aumenta la tensión del nodo B porque la resistencia equivalente del paralelo
+	crece. Al mismo tiempo, la corriente por $R_2$ disminuye porque su resistencia aumenta.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.60\textwidth]{imagenes/img5.png}
+		\caption{Barrido paramétrico de $R_2$ y variación de $V(B)$ e $I(R_2)$.}
+		\label{fig:barrido_parametrico_r2}
+	\end{figure}
+	
+	\begin{table}[H]
+		\centering
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+		
+			\textbf{$R_2$ ($k\Omega$)} & \textbf{$V(B)$ (V)} & \textbf{$I(R_2)$ (mA)} & \textbf{$I(R_3)$ (mA)} \\
+			\hline
+			$1,0$  & $0,713$ & $0,713$ & $0,216$ \\
+			\hline
+			$2,0$  & $1,107$ & $0,554$ & $0,336$ \\
+			\hline
+			$3,0$  & $1,358$ & $0,453$ & $0,412$ \\
+			\hline
+			$4,7$  & $1,624$ & $0,346$ & $0,492$ \\
+			\hline
+			$10,0$ & $1,988$ & $0,199$ & $0,602$ \\
+			\hline
+		\end{tabular}
+		\caption{Valores representativos del barrido paramétrico de $R_2$.}
+		\label{tab:barrido_parametrico_r2}
+	\end{table}
+	
+	
+	\section*{Implementación y mediciones}
+		\addcontentsline{toc}{section}{Implementación y mediciones}
+	
+	Para la implementación se propone armar el circuito en protoboard con resistores axiales de
+	$\frac{1}{4}\,W$  y alimentar el circuito con $V_S = 10\,V$.
+	Las mediciones de tensión se realizan en paralelo con cada componente y las de corriente en serie,
+	o de manera indirecta mediante la relación:
+	
+	\[
+	I = \frac{V}{R}
+	\]
+	
+	\begin{table}[H]
+		\centering
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{|c|c|c|}
+			\hline
+		
+			\textbf{Resistor} & \textbf{Valor nominal} & \textbf{Valor usado en el cálculo} \\
+			\hline
+			$R_1$ & $10\,k\Omega$  & $9,86\,k\Omega$ \\
+			\hline
+			$R_2$ & $4,7\,k\Omega$ & $4,622\,k\Omega$ \\
+			\hline
+			$R_3$ & $3,3\,k\Omega$ & $3,21\,k\Omega$ \\
+			\hline
+		\end{tabular}
+		\caption{Valores de resistencias utilizadas.}
+		\label{tab:resistencias_utilizadas}
+	\end{table}
+	\begin{table}[H]
+		\centering
+		\renewcommand{\arraystretch}{1.2}
+		
+		\resizebox{\textwidth}{!}{
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				\textbf{Elemento} &
+				\textbf{Tensión medida/esperada (V)} &
+				\textbf{Corriente medida/esperada (mA)} &
+				\textbf{Potencia medida/esperada (mW)} \\
+				\hline
+				$V_S$ & $10,000$ & $0,837$ & $8,370$ \\
+				\hline
+				$R_1$ & $8,370$ & $0,837$ & $7,010$ \\
+				\hline
+				$R_2$ & $1,620$ & $0,346$ & $0,560$ \\
+				\hline
+				$R_3$ & $1,620$ & $0,491$ & $0,800$ \\
+				\hline
+			\end{tabular}
+		}
+		
+		\caption{Valores de implementación organizados según los datos aportados.}
+		\label{tab:valores_implementacion}
+	\end{table}
+	
+	
+	
+	\subsection*{Comparación de resultados}
+			\addcontentsline{toc}{subsection}{Comparación de resultados}
+	
+	\begin{table}[H]
+		\centering
+		\small
+		\renewcommand{\arraystretch}{1.2}
+		\resizebox{\textwidth}{!}{
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				
+				\textbf{Magnitud} & \textbf{Origen} & \textbf{$V_S$} & \textbf{$R_1$} & \textbf{$R_2$} & \textbf{$R_3$} \\
+				\hline
+				Tensión (V) & Análisis & $10,000$ & $8,376$ & $1,624$ & $1,624$ \\
+				\hline
+				Tensión (V) & Simulación & $10,000$ & $8,376$ & $1,624$ & $1,624$ \\
+				\hline
+				Tensión (V) & Medición/esperado & $10,000$ & $8,370$ & $1,620$ & $1,620$ \\
+				\hline
+				Corriente (mA) & Análisis & $0,838$ & $0,838$ & $0,346$ & $0,492$ \\
+				\hline
+				Corriente (mA) & Simulación & $0,838$ & $0,838$ & $0,346$ & $0,492$ \\
+				\hline
+				Corriente (mA) & Medición/esperado & $0,837$ & $0,837$ & $0,346$ & $0,491$ \\
+				\hline
+				Potencia (mW) & Análisis & $8,376$ & $7,016$ & $0,561$ & $0,799$ \\
+				\hline
+				Potencia (mW) & Simulación & $8,376$ & $7,016$ & $0,561$ & $0,799$ \\
+				\hline
+				Potencia (mW) & Medición/esperado & $8,370$ & $7,010$ & $0,560$ & $0,800$ \\
+				\hline
+			\end{tabular}
+		}
+		\caption{Comparación entre análisis, simulación y medición.}
+		\label{tab:comparacion_resultados}
+	\end{table}
+	
+	Los valores obtenidos mediante el análisis teórico y la simulación coinciden dentro del error de
+	redondeo. Las pequeñas diferencias esperadas en laboratorio se deben principalmente a la tolerancia
+	real de los resistores, a la precisión del multímetro, a la resistencia interna del instrumento, a los
+	contactos de la protoboard y al ajuste exacto de la fuente de alimentación.
+	
+	
+	\section*{Conclusiones}		
+	\addcontentsline{toc}{section}{Conclusiones}
+	
+	
+	A partir del análisis realizado, se puede concluir que el circuito estudiado corresponde a una red
+	mixta, formada por una resistencia en serie con un conjunto de resistencias en paralelo. Para resolverlo,
+	primero se calculó la resistencia equivalente del paralelo entre $R_2$ y $R_3$, y luego se sumó este
+	resultado con $R_1$ para obtener la resistencia total del circuito.
+	
+	Los resultados obtenidos mediante el cálculo teórico fueron coherentes con los valores simulados en
+	LTspice. Esto permite verificar que la aplicación de la Ley de Ohm y de las Leyes de Kirchhoff fue
+	correcta. Además, se comprobó que la corriente total que entrega la fuente es la misma que circula por
+	$R_1$, mientras que en el nodo B dicha corriente se divide entre las ramas de $R_2$ y $R_3$.
+	
+	También se verificó que las resistencias conectadas en paralelo poseen la misma caída de tensión. En
+	este caso, tanto $R_2$ como $R_3$ presentan aproximadamente:
+	
+	\[
+	V_{R2} = V_{R3} = 1,62\,V
+	\]
+	
+	Por otro lado, se calculó la potencia disipada en cada elemento. Se observó que las potencias máximas
+	son muy inferiores a $1/4\,W$ y a $1/8\,W$. La resistencia más exigida es $R_1$, con una potencia
+	aproximada de:
+	
+	\[
+	P_{R1} = 7,016\,mW
+	\]
+	
+	Por lo tanto, los resistores seleccionados trabajan con un amplio margen de seguridad. Comparando
+	con resistores de $1/4\,W$, se tiene aproximadamente:
+	
+	\[
+	R_1 = 2,81\%, \qquad R_2 = 0,22\%, \qquad R_3 = 0,32\%
+	\]
+	
+	Y para resistores de $1/8\,W$:
+	
+	\[
+	R_1 = 5,61\%, \qquad R_2 = 0,45\%, \qquad R_3 = 0,64\%
+	\]
+	
+	Esto demuestra que no existe riesgo de sobrecalentamiento en las resistencias bajo las condiciones
+	analizadas.
+	
+	En la simulación ideal de LTspice no siempre se consideran factores reales como la tolerancia de los
+	resistores, la variación por temperatura, la resistencia de cables y contactos, la resistencia interna de
+	la fuente, la resistencia interna del multímetro y posibles falsos contactos en la protoboard. Por ese
+	motivo, al realizar mediciones prácticas pueden aparecer pequeñas diferencias respecto de los valores
+	teóricos y simulados.
+	
+	El barrido paramétrico de $R_2$ permitió observar que, al modificar esta resistencia, también cambia
+	la resistencia equivalente del paralelo. Cuando $R_2$ aumenta, la tensión del nodo B aumenta y la
+	corriente que circula por $R_2$ disminuye. Por lo tanto, $R_2$ afecta el reparto de corriente entre las
+	ramas paralelas.
+	
+	Finalmente, el análisis permitió comprobar que el cálculo teórico, la simulación y la medición son
+	herramientas complementarias. El cálculo permite predecir el comportamiento del circuito, la simulación
+	ayuda a verificarlo antes de armarlo físicamente y la medición permite confirmar el funcionamiento real.
+	
+	
+	
+	\subsection*{Selección de potencia nominal}
+	\addcontentsline{toc}{subsection}{Selección de potencia nominal}
+	
+	Las potencias máximas calculadas son muy inferiores a $1/4\,W$ y a $1/8\,W$.
+	El resistor más exigido es $R_1$, con aproximadamente $7,016\,mW$, por lo que
+	los resistores seleccionados trabajan con amplio margen de seguridad.
+	
+	\subsection*{Porcentaje de capacidad}
+	\addcontentsline{toc}{subsection}{Porcentaje de capacidad}
+	
+	\[
+	\text{Porcentaje de trabajo} =
+	\frac{P_{\text{disipada}}}{P_{\text{nominal}}} \cdot 100
+	\]
+	
+	Si se utilizan resistores de $1/4\,W$, los porcentajes de trabajo son:
+	
+	\[
+	R_1 = 2,81\%, \qquad R_2 = 0,22\%, \qquad R_3 = 0,32\%
+	\]
+	
+	Si se utilizan resistores de $1/8\,W$, los porcentajes de trabajo son:
+	
+	\[
+	R_1 = 5,61\%, \qquad R_2 = 0,45\%, \qquad R_3 = 0,64\%
+	\]
+	
+	Estos porcentajes son bajos y favorecen una buena vida útil de los componentes.
+	
+	\subsection*{Factores reales no contemplados por LTspice}
+	\addcontentsline{toc}{subsection}{Factores reales no contemplados por LTspice}
+	
+	En la simulación ideal no siempre se consideran la tolerancia de los resistores, la variación por
+	temperatura, la resistencia de cables y contactos, la resistencia interna de la fuente, la resistencia
+	interna del multímetro ni posibles falsos contactos en la protoboard.
+	
+	\subsection*{Efecto del barrido de $R_2$}
+	\addcontentsline{toc}{subsection}{Efecto del barrido de R2}
+	
+	La variación de $R_2$ modifica la resistencia equivalente del paralelo. Cuando $R_2$ aumenta, sube
+	la tensión del nodo B y disminuye la corriente por $R_2$; por lo tanto, $R_2$ afecta el reparto de
+	corriente en las ramas paralelas.
+	
+	\subsection*{Influencia de tolerancia}
+	\addcontentsline{toc}{subsection}{Influencia de tolerancia}
+	
+	Si el valor real de una resistencia se aparta de su valor nominal, también se modifican las corrientes
+	y tensiones medidas. Por eso puede aparecer una desviación entre los valores teóricos y los medidos.
+	
+	\subsection*{Efecto del amperímetro}
+	\addcontentsline{toc}{subsection}{Efecto del amperímetro}
+	
+	Al conectar el multímetro en serie para medir corriente se incorpora una pequeña resistencia interna
+	que puede modificar el circuito. En este caso, al trabajar con resistencias de kiloohmios, el efecto
+	suele ser pequeño, pero no debe ignorarse.
+	
+	\subsection*{Método más fiable}
+	\addcontentsline{toc}{subsection}{Método más fiable}
+	
+	Para la toma de decisiones de ingeniería, la medición experimental es la validación final del
+	comportamiento real. Sin embargo, el cálculo y la simulación son indispensables para prever
+	magnitudes, detectar errores y seleccionar componentes antes de construir.
+	
+	\subsection*{Variaciones entre análisis, simulación y medición}
+	\addcontentsline{toc}{subsection}{Variaciones entre análisis, simulación y medición}
+	
+	Las variaciones observadas son reducidas. Las principales causas son redondeo, tolerancia de
+	componentes, precisión instrumental, ajuste de la fuente y condiciones reales de montaje.
+	
+	
+\end{document}

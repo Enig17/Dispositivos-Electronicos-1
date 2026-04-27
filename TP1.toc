@@ -1,0 +1,26 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{Introducción}{2}{Doc-Start}%
+\contentsline {section}{Análisis del Circuito}{3}{Doc-Start}%
+\contentsline {subsection}{Aplicación de las Leyes de Kirchhoff}{3}{figure.2}%
+\contentsline {subsubsection}{Ley de Corrientes de Kirchhoff}{4}{section*.1}%
+\contentsline {subsubsection}{Ley de Tensiones de Kirchhoff}{4}{section*.1}%
+\contentsline {subsubsection}{Cálculo de caídas de tensión}{5}{section*.1}%
+\contentsline {subsubsection}{Despeje de la corriente total}{6}{section*.1}%
+\contentsline {subsubsection}{Cálculo de la resistencia equivalente}{6}{figure.3}%
+\contentsline {subsubsection}{Cálculo de las corrientes del circuito}{7}{figure.3}%
+\contentsline {subsubsection}{Cálculo de potencia}{8}{figure.3}%
+\contentsline {section}{Simulación en LTspice}{9}{table.1}%
+\contentsline {subsection}{Simulación DC op point}{9}{section*.2}%
+\contentsline {subsection}{Barrido de tensión continua}{10}{table.2}%
+\contentsline {subsection}{Barrido de parámetro $R_2$}{10}{figure.5}%
+\contentsline {section}{Implementación y mediciones}{11}{table.3}%
+\contentsline {subsection}{Comparación de resultados}{12}{table.5}%
+\contentsline {section}{Conclusiones}{12}{table.6}%
+\contentsline {subsection}{Selección de potencia nominal}{13}{section*.3}%
+\contentsline {subsection}{Porcentaje de capacidad}{13}{section*.3}%
+\contentsline {subsection}{Factores reales no contemplados por LTspice}{13}{section*.3}%
+\contentsline {subsection}{Efecto del barrido de R2}{14}{section*.3}%
+\contentsline {subsection}{Influencia de tolerancia}{14}{section*.3}%
+\contentsline {subsection}{Efecto del amperímetro}{14}{section*.3}%
+\contentsline {subsection}{Método más fiable}{14}{section*.3}%
+\contentsline {subsection}{Variaciones entre análisis, simulación y medición}{14}{section*.3}%
