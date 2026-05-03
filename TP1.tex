@@ -159,7 +159,7 @@
 				
 				Juarez Luciano                    & 95021   \\ 
 				Pereyra Nahuel                    & 402333  \\ 
-				         
+				
 				
 			\end{tabular}
 		\end{tabular}
@@ -189,6 +189,22 @@
 	Posteriormente, se empleó el software LTspice para simular el circuito y obtener sus valores de operación, verificando la coherencia entre los resultados calculados y los arrojados por la simulación. Además, se analizaron distintas herramientas del simulador para observar el comportamiento del circuito frente a variaciones de sus parámetros.
 	
 	Finalmente, se implementó físicamente el circuito en protoboard y se realizaron mediciones experimentales mediante el uso de multímetro, registrando los valores de tensión, corriente y potencia. A partir de la comparación entre análisis teórico, simulación e implementación práctica, se evaluaron las diferencias observadas y se identificaron las posibles causas asociadas a tolerancias de los componentes, condiciones reales de medición y limitaciones de los modelos ideales.
+	
+	
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|l|c|l|}
+			\hline
+			\textbf{Nombre y Apellido} & \textbf{Legajo} & \textbf{Rol} \\ \hline
+			
+			
+			Juarez Luciano & 95021 & Coordinador \\ \hline
+			Gonza Elías Noel Imanol & 87669 & Documentación/operador \\ \hline
+			Pereyra Nahuel & 402333 & Documentación/operador \\ \hline
+		\end{tabular}
+		\caption{Roles asignados.}
+	\end{table}
+	
 	
 	\newpage
 	
@@ -228,36 +244,6 @@
 	
 	
 	
-\begin{figure}[H]
-	\centering
-	
-	\begin{minipage}{0.30\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{imagenes/img3.png}
-		\caption{Circuito equivalente reemplazando el paralelo por $R_{23}$.}
-		\label{fig:circuito_equivalente}
-	\end{minipage}
-	\hfill
-	\begin{minipage}{0.60\textwidth}
-		En una conexión serie, la corriente es la misma en todos los elementos. Por esta razón, la corriente
-		que circula por $R_1$ es igual a la corriente total. Sin embargo, las caídas de tensión en cada resistencia
-		pueden ser diferentes, ya que dependen del valor de cada resistencia.
-		
-		Luego de obtener la corriente total, se continúa con el cálculo de las corrientes $I_2$ e $I_3$, que
-		corresponden a las corrientes que circulan por las resistencias conectadas en paralelo.
-		
-		Por lo tanto:
-		
-		\[
-		R_{23} = 1938,75\Omega
-		\]
-		
-		\[
-		I_1 = I_T = 0,8376\,mA
-		\]
-	\end{minipage}
-	
-\end{figure}
 	
 	
 	
@@ -428,52 +414,52 @@
 		\end{minipage}
 		\hfill
 		\begin{minipage}{0.60\textwidth}
+			
+			Partiendo de la ecuación de la malla principal:
+			
+			\[
+			V_S = I_T R_1 + I_2 R_2
+			\]
+			
+			Como anteriormente se obtuvo que:
+			
+			\[
+			I_2 = I_T \left(\frac{R_3}{R_2 + R_3}\right)
+			\]
+			
+			se reemplaza $I_2$ en la ecuación de tensión:
+			
+			\[
+			V_S = I_T R_1 + I_T \left(\frac{R_3}{R_2 + R_3}\right) R_2
+			\]
+			
+			Luego, se extrae factor común $I_T$:
+			
+			\[
+			V_S = I_T \left( R_1 + \frac{R_3 R_2}{R_2 + R_3} \right)
+			\]
+			
+			Finalmente, se despeja la corriente total:
+			
+			\[
+			I_T =
+			\frac{V_S}
+			{R_1 + \frac{R_3 R_2}{R_2 + R_3}}
+			\]
+			
+			Esta expresión permite calcular la corriente total del circuito considerando la resistencia $R_1$ en serie
+			con el paralelo formado por $R_2$ y $R_3$.
+			
+			
+		\end{minipage}
 		
-		Partiendo de la ecuación de la malla principal:
-		
-		\[
-		V_S = I_T R_1 + I_2 R_2
-		\]
-		
-		Como anteriormente se obtuvo que:
-		
-		\[
-		I_2 = I_T \left(\frac{R_3}{R_2 + R_3}\right)
-		\]
-		
-		se reemplaza $I_2$ en la ecuación de tensión:
-		
-		\[
-		V_S = I_T R_1 + I_T \left(\frac{R_3}{R_2 + R_3}\right) R_2
-		\]
-		
-		Luego, se extrae factor común $I_T$:
-		
-		\[
-		V_S = I_T \left( R_1 + \frac{R_3 R_2}{R_2 + R_3} \right)
-		\]
-		
-		Finalmente, se despeja la corriente total:
-		
-		\[
-		I_T =
-		\frac{V_S}
-		{R_1 + \frac{R_3 R_2}{R_2 + R_3}}
-		\]
-		
-		Esta expresión permite calcular la corriente total del circuito considerando la resistencia $R_1$ en serie
-		con el paralelo formado por $R_2$ y $R_3$.
-		
-
-	\end{minipage}
-	
 	\end{figure}
 	
 	
 	
 	
 	
-
+	
 	
 	
 	\subsubsection*{Cálculo de la resistencia equivalente}
@@ -713,10 +699,10 @@
 	
 	
 	
-   \section*{Simulación en LTspice}
-		\addcontentsline{toc}{section}{Simulación en LTspice}
+	\section*{Simulación en LTspice}
+	\addcontentsline{toc}{section}{Simulación en LTspice}
 	
-
+	
 	\subsection*{Simulación DC op point}
 	\addcontentsline{toc}{subsection}{Simulación DC op point}
 	
@@ -789,7 +775,7 @@
 		\renewcommand{\arraystretch}{1.2}
 		\begin{tabular}{|c|c|c|c|}
 			\hline
-		
+			
 			\textbf{$R_2$ ($k\Omega$)} & \textbf{$V(B)$ (V)} & \textbf{$I(R_2)$ (mA)} & \textbf{$I(R_3)$ (mA)} \\
 			\hline
 			$1,0$  & $0,713$ & $0,713$ & $0,216$ \\
@@ -809,7 +795,7 @@
 	
 	
 	\section*{Implementación y mediciones}
-		\addcontentsline{toc}{section}{Implementación y mediciones}
+	\addcontentsline{toc}{section}{Implementación y mediciones}
 	
 	Para la implementación se propone armar el circuito en protoboard con resistores axiales de
 	$\frac{1}{4}\,W$  y alimentar el circuito con $V_S = 10\,V$.
@@ -822,21 +808,21 @@
 	
 	
 	
-
+	
 	
 	\begin{table}[H]
 		\centering
 		\renewcommand{\arraystretch}{1.2}
 		\begin{tabular}{|c|c|c|}
 			\hline
-		
+			
 			\textbf{Resistor} & \textbf{Valor nominal} & \textbf{Valor usado en el cálculo} \\
 			\hline
-			$R_1$ & $10\,k\Omega$  & $9,86\,k\Omega$ \\
+			$R_1$ & $10\,k\Omega$  & $9,7\,k\Omega$ \\
 			\hline
-			$R_2$ & $4,7\,k\Omega$ & $4,622\,k\Omega$ \\
+			$R_2$ & $4,7\,k\Omega$ & $4,601\,k\Omega$ \\
 			\hline
-			$R_3$ & $3,3\,k\Omega$ & $3,21\,k\Omega$ \\
+			$R_3$ & $3,3\,k\Omega$ & $3,321\,k\Omega$ \\
 			\hline
 		\end{tabular}
 		\caption{Valores de resistencias utilizadas.}
@@ -845,24 +831,31 @@
 	
 	
 	
-		\begin{figure}[H]
+	\begin{figure}[H]
 		\centering
 		
 		\begin{minipage}{0.30\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{imagenes/img7.jpeg}
-			\caption{Medición de tensión en una resistencia.}
+			\caption{Medición de tensión en R1.}
 			\label{fig:medicion_tension}
 		\end{minipage}
-	\hspace{0.03\textwidth}
+		\hspace{0.03\textwidth}
 		\begin{minipage}{0.30\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{imagenes/img6.jpeg}
-			\caption{Medición de corriente en una resistencia.}
+			\caption{Medición de tensión en R2}
 			\label{fig:medicion_corriente}
 		\end{minipage}
+		\hspace{0.03\textwidth}
+		\begin{minipage}{0.30\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{imagenes/img8.jpeg}
+			\caption{Circuito armado}
+			\label{fig:circuito}
+		\end{minipage}
 		
-		\end{figure}
+	\end{figure}
 	
 	
 	
@@ -879,13 +872,13 @@
 				\textbf{Corriente medida/esperada (mA)} &
 				\textbf{Potencia medida/esperada (mW)} \\
 				\hline
-				$V_S$ & $10,000$ & $0,837$ & $8,370$ \\
+				$V_S$ & $10,000$ & $0,860$ & $8,600$ \\
 				\hline
-				$R_1$ & $8,370$ & $0,837$ & $7,010$ \\
+				$R_1$ & $8,342$ & $0,860$ & $7,174$ \\
 				\hline
-				$R_2$ & $1,620$ & $0,346$ & $0,560$ \\
+				$R_2$ & $1,658$ & $0,3605$ & $0,598$ \\
 				\hline
-				$R_3$ & $1,620$ & $0,491$ & $0,800$ \\
+				$R_3$ & $1,658$ & $0,4995$ & $0,828$ \\
 				\hline
 			\end{tabular}
 		}
@@ -897,7 +890,7 @@
 	
 	
 	\subsection*{Comparación de resultados}
-			\addcontentsline{toc}{subsection}{Comparación de resultados}
+	\addcontentsline{toc}{subsection}{Comparación de resultados}
 	
 	\begin{table}[H]
 		\centering
@@ -913,19 +906,19 @@
 				\hline
 				Tensión (V) & Simulación & $10,000$ & $8,376$ & $1,624$ & $1,624$ \\
 				\hline
-				Tensión (V) & Medición/esperado & $10,000$ & $8,370$ & $1,620$ & $1,620$ \\
+				Tensión (V) & Medición/esperado & $10,000$ & $8,342$ & $1,658$ & $1,658$ \\
 				\hline
 				Corriente (mA) & Análisis & $0,838$ & $0,838$ & $0,346$ & $0,492$ \\
 				\hline
 				Corriente (mA) & Simulación & $0,838$ & $0,838$ & $0,346$ & $0,492$ \\
 				\hline
-				Corriente (mA) & Medición/esperado & $0,837$ & $0,837$ & $0,346$ & $0,491$ \\
+				Corriente (mA) & Medición/esperado & $0,860$ & $0,860$ & $0,3605$ & $0,4995$ \\
 				\hline
 				Potencia (mW) & Análisis & $8,376$ & $7,016$ & $0,561$ & $0,799$ \\
 				\hline
 				Potencia (mW) & Simulación & $8,376$ & $7,016$ & $0,561$ & $0,799$ \\
 				\hline
-				Potencia (mW) & Medición/esperado & $8,370$ & $7,010$ & $0,560$ & $0,800$ \\
+				Potencia (mW) & Medición/esperado & $8,600$ & $7,174$ & $0,598$ & $0,828$ \\
 				\hline
 			\end{tabular}
 		}
@@ -957,7 +950,7 @@
 	este caso, tanto $R_2$ como $R_3$ presentan aproximadamente:
 	
 	\[
-	V_{R2} = V_{R3} = 1,62\,V
+	V_{R2} = V_{R3} = 1,658\,V
 	\]
 	
 	Por otro lado, se calculó la potencia disipada en cada elemento. Se observó que las potencias máximas
@@ -965,20 +958,20 @@
 	aproximada de:
 	
 	\[
-	P_{R1} = 7,016\,mW
+	P_{R1} = 7,174\,mW
 	\]
 	
 	Por lo tanto, los resistores seleccionados trabajan con un amplio margen de seguridad. Comparando
 	con resistores de $1/4\,W$, se tiene aproximadamente:
 	
 	\[
-	R_1 = 2,81\%, \qquad R_2 = 0,22\%, \qquad R_3 = 0,32\%
+	R_1 = 2,87\%, \qquad R_2 = 0,24\%, \qquad R_3 = 0,33\%
 	\]
 	
 	Y para resistores de $1/8\,W$:
 	
 	\[
-	R_1 = 5,61\%, \qquad R_2 = 0,45\%, \qquad R_3 = 0,64\%
+	R_1 = 5,74\%, \qquad R_2 = 0,48\%, \qquad R_3 = 0,66\%
 	\]
 	
 	Esto demuestra que no existe riesgo de sobrecalentamiento en las resistencias bajo las condiciones
@@ -1005,7 +998,7 @@
 	\addcontentsline{toc}{subsection}{Selección de potencia nominal}
 	
 	Las potencias máximas calculadas son muy inferiores a $1/4\,W$ y a $1/8\,W$.
-	El resistor más exigido es $R_1$, con aproximadamente $7,016\,mW$, por lo que
+	El resistor más exigido es $R_1$, con aproximadamente $7,174\,mW$, por lo que
 	los resistores seleccionados trabajan con amplio margen de seguridad.
 	
 	\subsection*{Porcentaje de capacidad}
@@ -1019,13 +1012,13 @@
 	Si se utilizan resistores de $1/4\,W$, los porcentajes de trabajo son:
 	
 	\[
-	R_1 = 2,81\%, \qquad R_2 = 0,22\%, \qquad R_3 = 0,32\%
+	R_1 = 2,87\%, \qquad R_2 = 0,24\%, \qquad R_3 = 0,33\%
 	\]
 	
 	Si se utilizan resistores de $1/8\,W$, los porcentajes de trabajo son:
 	
 	\[
-	R_1 = 5,61\%, \qquad R_2 = 0,45\%, \qquad R_3 = 0,64\%
+	R_1 = 5,74\%, \qquad R_2 = 0,48\%, \qquad R_3 = 0,66\%
 	\]
 	
 	Estos porcentajes son bajos y favorecen una buena vida útil de los componentes.
@@ -1060,7 +1053,7 @@
 	\subsection*{Método más fiable}
 	\addcontentsline{toc}{subsection}{Método más fiable}
 	
-	Para la toma de decisiones de ingeniería, la medición experimental es la validación final del
+	Para la toma de decisiones de ingeniería electrónica, la medición experimental es la validación final del
 	comportamiento real. Sin embargo, el cálculo y la simulación son indispensables para prever
 	magnitudes, detectar errores y seleccionar componentes antes de construir.
 	
@@ -1084,5 +1077,26 @@
 		
 		\url{https://github.com/Enig17/Dispositivos-Electronicos-1}
 	\end{center}
+	
+	
+	
+	
+	\newpage
+	\section*{Calificación}		
+	\addcontentsline{toc}{section}{Calificación}
+	\begin{table}[h]
+		\centering
+		\renewcommand{\arraystretch}{1.5} % Para que las filas tengan buen espacio
+		\begin{tabular}{|l|c|c|}
+			\hline
+			\textbf{Tarea} & \textbf{Puntuación} & \textbf{Máximo} \\ \hline
+			Presentación del informe con archivos correspondientes & & 20\% \\ \hline
+			Comprender el análisis y funcionamiento de circuitos & & 30\% \\ \hline
+			Comprender la implementación y mediciones realizadas & & 30\% \\ \hline
+			Defensa de las conclusiones & & 20\% \\ \hline
+			\textbf{TOTAL} & & \textbf{100\%} \\ \hline
+		\end{tabular}
+	\end{table}
+	
 	
 \end{document}

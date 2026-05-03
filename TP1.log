@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.11)  26 APR 2026 23:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.11)  3 MAY 2026 02:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1183,9 +1183,8 @@ LaTeX Info: Redefining \% on input line 13.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported  on input line 13.
 
-
-LaTeX Warning: Label `fig:circuito_equivalente' multiply defined.
-
+<Reading QR code for "https://github.com/Enig17/Dispositivos-Electronicos-1" at
+ level 4-M from aux file.>
 )
 \openout1 = `TP1.aux'.
 
@@ -1325,20 +1324,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-19.09483pt}.
 
 [2]
-<imagenes/img2.png, id=141, 221.32687pt x 134.00063pt>
+<imagenes/img2.png, id=146, 221.32687pt x 134.00063pt>
 File: imagenes/img2.png Graphic file (type png)
 <use imagenes/img2.png>
-Package pdftex.def Info: imagenes/img2.png  used on input line 209.
+Package pdftex.def Info: imagenes/img2.png  used on input line 225.
 (pdftex.def)             Requested size: 217.66211pt x 131.78996pt.
-<imagenes/img3.png, id=143, 127.97812pt x 134.00063pt>
-File: imagenes/img3.png Graphic file (type png)
-<use imagenes/img3.png>
-Package pdftex.def Info: imagenes/img3.png  used on input line 236.
-(pdftex.def)             Requested size: 145.11053pt x 151.94849pt.
 
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 271.
+(hyperref)                be the same. Added a new anchor on input line 257.
 
 
 
@@ -1349,7 +1343,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-19.09483pt}.
 
-[3 <./imagenes/img2.png> <./imagenes/img3.png>]
+[3 <./imagenes/img2.png>]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1359,9 +1353,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-19.09483pt}.
 
 [4]
+<imagenes/img3.png, id=163, 127.97812pt x 134.00063pt>
 File: imagenes/img3.png Graphic file (type png)
 <use imagenes/img3.png>
-Package pdftex.def Info: imagenes/img3.png  used on input line 425.
+Package pdftex.def Info: imagenes/img3.png  used on input line 411.
 (pdftex.def)             Requested size: 145.11053pt x 151.94849pt.
 
 
@@ -1381,7 +1376,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-19.09483pt}.
 
-[6]
+[6 <./imagenes/img3.png>]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1402,12 +1397,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [8]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 721.
+(hyperref)                be the same. Added a new anchor on input line 707.
 
-<imagenes/img1.png, id=184, 452.4403pt x 149.8097pt>
+<imagenes/img1.png, id=188, 452.4403pt x 149.8097pt>
 File: imagenes/img1.png Graphic file (type png)
 <use imagenes/img1.png>
-Package pdftex.def Info: imagenes/img1.png  used on input line 731.
+Package pdftex.def Info: imagenes/img1.png  used on input line 717.
 (pdftex.def)             Requested size: 411.14528pt x 136.135pt.
 
 
@@ -1419,28 +1414,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-19.09483pt}.
 
 [9 <./imagenes/img1.png>]
-<imagenes/img4.png, id=192, 452.4403pt x 313.17pt>
+<imagenes/img4.png, id=196, 452.4403pt x 313.17pt>
 File: imagenes/img4.png Graphic file (type png)
 <use imagenes/img4.png>
-Package pdftex.def Info: imagenes/img4.png  used on input line 766.
+Package pdftex.def Info: imagenes/img4.png  used on input line 752.
 (pdftex.def)             Requested size: 290.22107pt x 200.88206pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 774.
+(hyperref)                removing `math shift' on input line 760.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 774.
+(hyperref)                removing `subscript' on input line 760.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 774.
+(hyperref)                removing `math shift' on input line 760.
 
-<imagenes/img5.png, id=193, 452.4403pt x 410.2828pt>
+<imagenes/img5.png, id=197, 452.4403pt x 410.2828pt>
 File: imagenes/img5.png Graphic file (type png)
 <use imagenes/img5.png>
-Package pdftex.def Info: imagenes/img5.png  used on input line 782.
+Package pdftex.def Info: imagenes/img5.png  used on input line 768.
 (pdftex.def)             Requested size: 290.22107pt x 263.17484pt.
 
 
@@ -1452,15 +1447,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-19.09483pt}.
 
 [10 <./imagenes/img4.png> <./imagenes/img5.png>]
-<imagenes/img7.jpeg, id=203, 903.375pt x 1606.0pt>
+<imagenes/img7.jpeg, id=207, 903.375pt x 1606.0pt>
 File: imagenes/img7.jpeg Graphic file (type jpg)
 <use imagenes/img7.jpeg>
-Package pdftex.def Info: imagenes/img7.jpeg  used on input line 853.
+Package pdftex.def Info: imagenes/img7.jpeg  used on input line 839.
 (pdftex.def)             Requested size: 145.11053pt x 257.96999pt.
-<imagenes/img6.jpeg, id=204, 903.375pt x 1606.0pt>
+<imagenes/img6.jpeg, id=208, 903.375pt x 1606.0pt>
 File: imagenes/img6.jpeg Graphic file (type jpg)
 <use imagenes/img6.jpeg>
-Package pdftex.def Info: imagenes/img6.jpeg  used on input line 860.
+Package pdftex.def Info: imagenes/img6.jpeg  used on input line 846.
+(pdftex.def)             Requested size: 145.11053pt x 257.96999pt.
+<imagenes/img8.jpeg, id=209, 903.375pt x 1606.0pt>
+File: imagenes/img8.jpeg Graphic file (type jpg)
+<use imagenes/img8.jpeg>
+Package pdftex.def Info: imagenes/img8.jpeg  used on input line 853.
 (pdftex.def)             Requested size: 145.11053pt x 257.96999pt.
 
 
@@ -1471,7 +1471,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-19.09483pt}.
 
-[11 <./imagenes/img7.jpeg> <./imagenes/img6.jpeg>]
+[11 <./imagenes/img7.jpeg> <./imagenes/img6.jpeg> <./imagenes/img8.jpeg>]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1483,7 +1483,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [12]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 1005.
+(hyperref)                be the same. Added a new anchor on input line 998.
 
 
 
@@ -1500,30 +1500,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <QR code requested for "https://github.com/Enig17/Dispositivos-Electronicos-1" 
 in version 0-M.>
 
-<Calculating QR code for "https://github.com/Enig17/Dispositivos-Electronicos-1
-" in version 4-M.>
-<Splitting off block 1> <Splitting off block 2> <Making error block 1>
-<Making error block 2> <Interleaving datablocks of length 32\ and 33:  1, 2,
-3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
-24, 25, 26, 27, 28, 29, 30, 31, 32, .>
-<Interleaving errorblocks of length 18:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
-12, 13, 14, 15, 16, 17, 18, .><Interleaving complete.> <Writing data...
-done.>
-<Applying Mask 0... done. Calculating penalty... penalty is 1460>
-<Applying Mask 1... done. Calculating penalty... penalty is 1496>
-<Applying Mask 2... done. Calculating penalty... penalty is 1218>
-<Applying Mask 3... done. Calculating penalty... penalty is 1307>
-<Applying Mask 4... done. Calculating penalty... penalty is 1466>
-<Applying Mask 5... done. Calculating penalty... penalty is 1307>
-<Applying Mask 6... done. Calculating penalty... penalty is 1358>
-<Applying Mask 7... done. Calculating penalty... penalty is 1315>
-<Selected Mask 2>
-<Encoding and writing format string... done.>
-<Encoding and writing version information... done.>
-<Saving QR code to memory... done.>
-<Writing QR code to aux file... done.>
-<Printing matrix... done.>
-
+<Copying the QR code for "https://github.com/Enig17/Dispositivos-Electronicos-1
+" in version 4-M as previously calculated.>
 
 
 
@@ -1533,9 +1511,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-19.09483pt}.
 
-[14] 
+[14]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 31.09483pt, for example:
+(fancyhdr)                \setlength{\headheight}{31.09483pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-19.09483pt}.
+
+[15] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
-runsystem(latexminted cleantemp  --timestamp 20260426232726 5D8F11164726D92B84F
+runsystem(latexminted cleantemp  --timestamp 20260503024140 5D8F11164726D92B84F
 BA2785F18665C)...disabled (restricted).
 
 (TP1.aux
@@ -1549,21 +1536,17 @@ LaTeX Info: Redefining \% on input line 13.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-14>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `TP1.out' has not changed.
-(rerunfilecheck)             Checksum: 97D05944C31B9691FF276CE88D67FD38;4861.
+(rerunfilecheck)             Checksum: 34E2DAFF4A6E517A092B4B45A2B5231F;4965.
  ) 
 Here is how much of TeX's memory you used:
- 44667 strings out of 469941
- 996281 string characters out of 5469430
- 1570694 words of memory out of 5000000
- 70812 multiletter control sequences out of 15000+600000
+ 41398 strings out of 469941
+ 943634 string characters out of 5469430
+ 1571811 words of memory out of 5000000
+ 67541 multiletter control sequences out of 15000+600000
  645192 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,17n,252p,1272b,1866s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,17n,107p,1274b,829s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\scanf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
 1200.pk> <C:\Users\scanf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ecrm0800.pk> <C:\Users\scanf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
@@ -1587,9 +1570,9 @@ MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/scanf/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/scanf/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/scanf/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on TP1.pdf (15 pages, 786555 bytes).
+Output written on TP1.pdf (16 pages, 1028994 bytes).
 PDF statistics:
- 655 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
- 248 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 675 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
+ 261 words of extra memory for PDF output out of 10000 (max. 10000000)
 
